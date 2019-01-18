@@ -131,5 +131,28 @@ Usage of selpg:
 		fmt.Println(result)
 	}
 ```
-
+## 测试
+#### 生成测试数据
+生成1-720共720行的等差数据到input_file文件中
+```
+$ seq 720 >input_file
+```
+#### 测试一
+运行
+```
+selpg -s1 -e1 input_file
+```
+结果：1到72，共72行
+#### 测试二
+运行
+```
+selpg -s1 -e1 < input_file
+```
+结果：1到72，共72行
+#### 测试三
+运行
+```
+selpg -s1 -e2 input_file >output_file
+```
+结果： 得到文件output_file，包含1到144行数据
 
